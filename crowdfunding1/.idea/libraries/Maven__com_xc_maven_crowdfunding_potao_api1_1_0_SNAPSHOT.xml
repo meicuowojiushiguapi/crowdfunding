@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.xc.maven:crowdfunding-potao-api1:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://D:/Program Files (x86)/apache-maven-3.8.1/repository/com/xc/maven/crowdfunding-potao-api1/1.0-SNAPSHOT/crowdfunding-potao-api1-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/Program Files (x86)/apache-maven-3.8.1/repository/com/xc/maven/crowdfunding-potao-api1/1.0-SNAPSHOT/crowdfunding-potao-api1-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/Program Files (x86)/apache-maven-3.8.1/repository/com/xc/maven/crowdfunding-potao-api1/1.0-SNAPSHOT/crowdfunding-potao-api1-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
