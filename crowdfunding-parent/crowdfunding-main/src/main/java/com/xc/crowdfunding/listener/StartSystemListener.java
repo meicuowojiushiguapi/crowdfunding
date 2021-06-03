@@ -7,7 +7,7 @@ import javax.servlet.ServletContextListener;
 public class StartSystemListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        System.out.println("bbbbbbbb");
+
         ServletContext servletContext = sce.getServletContext();
         String contextPath = servletContext.getContextPath();
         servletContext.setAttribute("APP_PATH",contextPath);

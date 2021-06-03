@@ -52,9 +52,22 @@
 	</select>
 
 	<select id="queryUserLogin" parameterType="map" resultMap="BaseResultMap">
-		select id, loginacct, userpswd,
+		select id, loginacct,
 		username, email, createtime
 		from t_user where loginacct=#{loginacct} and userpswd=#{userpswd}
 	</select>
 
+	<select id="queryUser" parameterType="map" resultMap="BaseResultMap">
+		select id, loginacct,
+			   username, email, createtime
+		from t_user
+		<where>
+			<if test="querytext!=null">loginacct like concat("%",#{querytext},"%")</if>
+		</where>
+		limit #{startIndex},#{pagesize}
+	</select>
+	<select id="queryUserCount"  resultType="Integer">
+		select count(*)
+		from t_user
+	</select>
 </mapper>

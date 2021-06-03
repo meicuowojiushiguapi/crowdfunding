@@ -1,8 +1,10 @@
 package com.xc.crowdfunding.manager.dao;
 
+import com.xc.crowdfunding.bean.Page;
 import com.xc.crowdfunding.bean.User;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,4 +21,7 @@ public interface UserMapper {
     int updateByPrimaryKey(User record);
 
 	User queryUserLogin(Map<String, Object> paramMap);
+
+    List<User> queryUser(HashMap map);
+    Integer queryUserCount();
 }

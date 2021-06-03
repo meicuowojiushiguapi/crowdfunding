@@ -63,9 +63,9 @@
 <script>
     function dologin() {
 
-        var loginacct=$.trim($("#floginacct").val());
-        var userpswd=$.trim($("#fuserpswd").val());
-        var type=$.trim($("#ftype").val());
+        var loginacct=$("#floginacct").val();
+        var userpswd=$("#fuserpswd").val();
+        var type=$("#ftype").val();
 
         if(floginacct==""){
             alert("请填写用户名！");
@@ -74,21 +74,14 @@
         }
         $.ajax({
             type:"POST",
-            dataType:"json",
             url:"/do_login.do",
             data:{
-                "floginacct":floginacct,
-                "fuserpswd":fuserpswd,
-                "ftype":ftype
-            },
-            beforeSend:function () {
-
-                return true;
+                "loginacct":loginacct,
+                "userpswd":userpswd,
+                "type":type
             },
             success:function (result) {
-
                 if(result.success){
-
                     window.location.href="/main.htm";
                 }else{
                     alert("not ok");

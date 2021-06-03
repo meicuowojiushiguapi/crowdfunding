@@ -38,14 +38,14 @@ public class DispatcherServlet {
     }
     @ResponseBody
     @RequestMapping("/do_login")
-    public AjaxResult do_login(String floginacct, String fuserpswd,String  ftype, HttpSession session){
+    public AjaxResult do_login(String loginacct, String userpswd,String  type, HttpSession session){
         AjaxResult result=new AjaxResult();
 
         try{
             HashMap<String,Object> map=new HashMap<String, Object>();
-            map.put("loginacct",floginacct);
-            map.put("userpswd", MD5Util.digest(fuserpswd));
-            map.put("ftype",ftype);
+            map.put("loginacct",loginacct);
+            map.put("userpswd", MD5Util.digest(userpswd));
+            map.put("type",type);
             User user = userService.query_User_Login(map);
             result.setSuccess(true);
             session.setAttribute("user",user);
